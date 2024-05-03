@@ -1,0 +1,18 @@
+ {
+  "success": true,
+  "data": {
+      "airports": [
+          {
+              "id": "001",
+              "name": "London Gatwick",
+              "code": "LGW"
+          },
+          {
+            "id": "002",
+              "name": "London Standston",
+              "code": "LTN",
+              "country": "United Kingdom"
+          }
+        ]
+      }
+    }

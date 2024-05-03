@@ -1,0 +1,26 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Karla", sans-serif;
+  margin: 0;
+}
+
+main {
+  padding: 36px;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  height: 65px;
+  background: rgb(45, 45, 244);
+  color: white;
+  padding: 20px;
+}
+
+.form-button{
+  background-color: rgb(231, 231, 14);
+  color: blue;
+}
