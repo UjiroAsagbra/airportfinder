@@ -25,15 +25,20 @@ const Airports=() => {
 
   const handleSearch = (event) => {
     setAirportCode(event.target.value.toUpperCase());
+    setSearchResult(null); 
+    setNoResult('')
   };
 
   const handleSubmit = (event) => {
     event.preventDefault();
-  
     const airport = airportData.find(airport => airport.code === airportCode);
-    setSearchResult(airport);
-
-   if (searchResult == null){setNoResult("No airport with that code found")}
+    if (airport) {
+      setSearchResult(airport);
+      setNoResult('');
+    } else {
+      setSearchResult(null);
+      setNoResult(`No airport found with code ${airportCode}`);
+    }
 
    setAirportCode("")
   };
@@ -65,6 +70,11 @@ const Airports=() => {
         </button>
         </form>
       </div>
+      {noResult && (
+        <p>{noResult}</p>
+      )}
+
+
       {searchResult && (
         <div className="airport-data">
           <h2>Airport Details</h2>
@@ -73,7 +83,6 @@ const Airports=() => {
           <p>Country: {searchResult.country}</p>
         </div>
       )}
-      <p>{noResult}</p>
       
     </main>
   )

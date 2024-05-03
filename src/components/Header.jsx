@@ -1,7 +1,7 @@
 const Header = () => {
   return(
     <h1 className="header">
-      Find my airport
+      Find My Airport
     </h1>
   )
 }
