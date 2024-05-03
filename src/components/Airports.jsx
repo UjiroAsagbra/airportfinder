@@ -3,6 +3,7 @@ const Airports=() => {
   const [airportData, setAirportData] = useState(null);
   const [airportCode, setAirportCode] = useState('');
   const [searchResult, setSearchResult] = useState(null);
+  const [noResult, setNoResult] = useState("");
 
  
   useEffect(() => {
@@ -20,7 +21,7 @@ const Airports=() => {
     };
 
     fetchData();
-  }, []); // Empty dependency array ensures useEffect runs only once after the component mounts
+  }, []); 
 
   const handleSearch = (event) => {
     setAirportCode(event.target.value.toUpperCase());
@@ -28,11 +29,13 @@ const Airports=() => {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-
-    // Find the airport with the matching code
+  
     const airport = airportData.find(airport => airport.code === airportCode);
     setSearchResult(airport);
-    setAirportCode('')
+
+   if (searchResult == null){setNoResult("No airport with that code found")}
+
+   setAirportCode("")
   };
 
   
@@ -42,7 +45,7 @@ const Airports=() => {
   return(
     <main>
       <div className="airport-form">
-      <form onSubmit={handleSubmit}>
+      <form>
        
         <input  
           id="airport-code" 
@@ -56,6 +59,7 @@ const Airports=() => {
         /> 
         <button 
         className="form-button"
+        onClick={handleSubmit}
         >
           Find Airport
         </button>
@@ -69,10 +73,8 @@ const Airports=() => {
           <p>Country: {searchResult.country}</p>
         </div>
       )}
-
-      {!searchResult && airportCode && (
-        <p>No airport found with code {airportCode}</p>
-      )}
+      <p>{noResult}</p>
+      
     </main>
   )
 }
