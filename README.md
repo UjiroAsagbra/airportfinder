@@ -1,8 +1,3 @@
-# React + Vite
+Work in progress....
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+I recently stated working for Ryanair as a check-in agent and one of the challenges that new agent face is trying to figure out what airport/country passengers are flying to by looking at the three letter code on their boarding passes. So i decided to create a very simple app that gives those details when the code is entered. 
