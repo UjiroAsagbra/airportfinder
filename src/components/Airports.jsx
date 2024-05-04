@@ -37,7 +37,7 @@ const Airports=() => {
       setNoResult('');
     } else {
       setSearchResult(null);
-      setNoResult(`No airport found with code ${airportCode}`);
+      setNoResult(`Ryanair doesn't fly to ${airportCode} try a different code`);
     }
 
    setAirportCode("")
@@ -48,14 +48,14 @@ const Airports=() => {
 
   
   return(
-    <main>
+    <main className="col-3 col-s-12">
       <div className="airport-form">
       <form>
        
         <input  
           id="airport-code" 
           type="text" 
-          className="three-letter-code" 
+          className="lettercode" 
           placeholder='Enter Three Letter Code'
           name = 'airport-code'
           onChange={handleSearch}
@@ -79,7 +79,7 @@ const Airports=() => {
         <div className="airport-data">
           <h2>Airport Details</h2>
           <p>Code: {searchResult.code}</p>
-          <p>Name: {searchResult.name}</p>
+          <p>Airport Name: {searchResult.name}</p>
           <p>Country: {searchResult.country}</p>
         </div>
       )}

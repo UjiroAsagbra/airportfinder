@@ -7,20 +7,44 @@ body {
   margin: 0;
 }
 
-main {
-  padding: 36px;
-}
 
-.header {
-  display: flex;
-  align-items: center;
-  height: 65px;
-  background: rgb(45, 45, 244);
-  color: white;
-  padding: 20px;
+
+.lettercode{
+  height: 30px;
+  border-radius: 5px;
+  margin-right: 10px;
+  padding-left: 10px;
+  margin-left: 15px;
 }
 
 .form-button{
-  background-color: rgb(231, 231, 14);
-  color: blue;
+  background-color: yellow;
+  color: rgb(13, 13, 218);
+  font-weight: bolder ;
+  height: 30px;
+  border-radius: 5px;
+}
+
+.form-button:hover{
+  background-color: rgb(235, 222, 110);
+}
+.form-button:active {
+  background-color:  rgb(235, 222, 110);
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+.header{
+  color: white;
+  background-color: blue;
+  height: 10vh;
+  padding-top: 15px;
+}
+
+p{
+  margin-left: 20px;
+}
+
+h2{
+  margin-left: 20px;
 }
